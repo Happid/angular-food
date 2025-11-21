@@ -1,0 +1,46 @@
+<app-breadcrumb currentNavigation="Your Wishlist ({{wishlistProducts.length}})"/>
+
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+    @for (item of wishlistProducts; track $index) {
+      <!-- CARD 1 -->
+      <div class="bg-white p-8 rounded-lg shadow-sm">
+        <div class="flex justify-between items-center text-center mb-4">
+          <h3 class="text-lg font-semibold tracking-wide">
+            {{item.strMeal}}
+          </h3>
+          <button
+            (click)="updateWishlistStatus(item)"
+            class="cursor-pointer hover:opacity-70"
+            aria-label="wishlist">
+              <app-love-or-not [wishlist]="item.wishlist"/>
+          </button>
+        </div>
+
+        <hr class="border-gray-200 mb-6">
+
+        <div class="flex justify-between space-x-2">
+          <div class="text-gray-600 text-sm flex flex-col justify-between">
+            <span>{{ item.strCategoryDescription | truncate:50 }}</span>
+            <span>{{ item.price | currency:'USD' }}</span>
+          </div>
+
+          <img [src]="item.strMealThumb" alt="sandwich" class="w-40 h-auto">
+        </div>
+
+        <button
+          (click)="addCart(item)"
+          class="cursor-pointer mt-3 bg-black text-white w-full py-2 rounded tracking-wider text-sm hover:opacity-70">
+          Add to Cart
+        </button>
+      </div>
+    }
+  </div>
+
+
+  <div
+    routerLink="/product"
+    class="cursor-pointer text-center mt-10 underline text-orange-500">
+    Back to Product Page
+  </div>
+</section>

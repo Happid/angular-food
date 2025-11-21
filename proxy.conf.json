@@ -1,0 +1,9 @@
+{
+    "/api/json/v1/1": {
+      "target": "https://www.themealdb.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

@@ -1,0 +1,116 @@
+[
+  {
+    "strMeal": "Aussie Burgers",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/44bzep1761848278.jpg",
+    "idMeal": "53099",
+    "price": 10.30,
+    "strCategoryDescription": "Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Beef and Mustard Pie",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/sytuqu1511553755.jpg",
+    "idMeal": "52874",
+    "price": 5.30,
+    "strCategoryDescription": "Beef is the culinary name for meat from cattle, particularly skeletal muscle. Humans have been eating beef since prehistoric times.[1] Beef is a source of high-quality protein and essential nutrients.[2]",
+    "wishlist": false,
+    "addCart": 0
+  },
+
+
+  {
+    "strMeal": "Thai green chicken soup",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/7kb44y1763589084.jpg",
+    "idMeal": "53214",
+    "price": 12.30,
+    "strCategoryDescription": "Chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.[1] Humans commonly keep chickens as a source of food (consuming both their meat and eggs) and, more rarely, as pets.",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Thai Green Curry",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg",
+    "idMeal": "52814",
+    "price": 11.30,
+    "strCategoryDescription": "Chicken is a type of domesticated fowl, a subspecies of the red junglefowl. It is one of the most common and widespread domestic animals, with a total population of more than 19 billion as of 2011.[1] Humans commonly keep chickens as a source of food (consuming both their meat and eggs) and, more rarely, as pets.",
+    "wishlist": false,
+    "addCart": 0
+  },
+
+  {
+    "strMeal": "Alfajores",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/a4kgf21763075288.jpg",
+    "idMeal": "53138",
+    "price": 10.30,
+    "strCategoryDescription": "Dessert is a course that concludes a meal. The course usually consists of sweet foods, such as confections dishes or fruit, and possibly a beverage such as dessert wine or liqueur, however in the United States it may include coffee, cheeses, nuts, or other savory items regarded as a separate course elsewhere. In some parts of the world, such as much of central and western Africa, and most parts of China, there is no tradition of a dessert course to conclude a meal.\r\n\r\nThe term dessert can apply to many confections, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, and sweet soups, and tarts. Fruit is also commonly found in dessert courses because of its naturally occurring sweetness. Some cultures sweeten foods that are more commonly savory to create desserts.",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Anzac biscuits",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/q47rkb1762324620.jpg",
+    "idMeal": "53111",
+    "price": 12.30,
+    "strCategoryDescription": "Dessert is a course that concludes a meal. The course usually consists of sweet foods, such as confections dishes or fruit, and possibly a beverage such as dessert wine or liqueur, however in the United States it may include coffee, cheeses, nuts, or other savory items regarded as a separate course elsewhere. In some parts of the world, such as much of central and western Africa, and most parts of China, there is no tradition of a dessert course to conclude a meal.\r\n\r\nThe term dessert can apply to many confections, such as biscuits, cakes, cookies, custards, gelatins, ice creams, pastries, pies, puddings, and sweet soups, and tarts. Fruit is also commonly found in dessert courses because of its naturally occurring sweetness. Some cultures sweeten foods that are more commonly savory to create desserts.",
+    "wishlist": false,
+    "addCart": 0
+  },
+
+  {
+    "strMeal": "Kapsalon",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/sxysrt1468240488.jpg",
+    "idMeal": "52769",
+    "price": 5.30,
+    "strCategoryDescription": "Lamb, hogget, and mutton are the meat of domestic sheep (species Ovis aries) at different ages.\r\n\r\nA sheep in its first year is called a lamb, and its meat is also called lamb. The meat of a juvenile sheep older than one year is hogget; outside the USA this is also a term for the living animal. The meat of an adult sheep is mutton, a term only used for the meat, not the living animals. The term mutton is almost always used to refer to goat meat in the Indian subcontinent.\r\n\r\n",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Keleya Zaara",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/8x09hy1560460923.jpg",
+    "idMeal": "52974",
+    "price": 2.30,
+    "strCategoryDescription": "Lamb, hogget, and mutton are the meat of domestic sheep (species Ovis aries) at different ages.\r\n\r\nA sheep in its first year is called a lamb, and its meat is also called lamb. The meat of a juvenile sheep older than one year is hogget; outside the USA this is also a term for the living animal. The meat of an adult sheep is mutton, a term only used for the meat, not the living animals. The term mutton is almost always used to refer to goat meat in the Indian subcontinent.\r\n\r\n",
+    "wishlist": false,
+    "addCart": 0
+  },
+
+  {
+    "strMeal": "Callaloo Jamaican Style",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/ussyxw1515364536.jpg",
+    "idMeal": "52939",
+    "price": 9.99,
+    "strCategoryDescription": "General foods that don't fit into another category",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Chakchouka ",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/gpz67p1560458984.jpg",
+    "idMeal": "52969",
+    "price": 5.00,
+    "strCategoryDescription": "General foods that don't fit into another category",
+    "wishlist": false,
+    "addCart": 0
+  },
+
+  {
+    "strMeal": "Fettuccine Alfredo",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/0jv5gx1661040802.jpg",
+    "idMeal": "53064",
+    "price": 11.00,
+    "strCategoryDescription": "Pasta is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily.\r\n\r\nAlso commonly used to refer to the variety of pasta dishes, pasta is typically a noodle made from an unleavened dough of a durum wheat flour mixed with water or eggs and formed into sheets or various shapes, then cooked by boiling or baking. As an alternative for those wanting a different taste, or who need to avoid products containing gluten, some pastas can be made using rice flour in place of wheat.[3][4] Pastas may be divided into two broad categories, dried (pasta secca) and fresh (pasta fresca).",
+    "wishlist": false,
+    "addCart": 0
+  },
+  {
+    "strMeal": "Fettucine alfredo",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/uquqtu1511178042.jpg",
+    "idMeal": "52835",
+    "price": 5.30,
+    "strCategoryDescription": "Pasta is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily.\r\n\r\nAlso commonly used to refer to the variety of pasta dishes, pasta is typically a noodle made from an unleavened dough of a durum wheat flour mixed with water or eggs and formed into sheets or various shapes, then cooked by boiling or baking. As an alternative for those wanting a different taste, or who need to avoid products containing gluten, some pastas can be made using rice flour in place of wheat.[3][4] Pastas may be divided into two broad categories, dried (pasta secca) and fresh (pasta fresca).",
+    "wishlist": false,
+    "addCart": 0
+  }
+]

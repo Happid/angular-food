@@ -1,0 +1,100 @@
+<app-breadcrumb currentNavigation="Your Shopping Cart ({{totalCart}})"/>
+
+<section class="max-w-6xl mx-auto px-6 py-10 flex flex-col">
+  <div class="-m-1.5 overflow-x-auto">
+    <div class="p-1.5 min-w-full inline-block align-middle">
+      <div class="border border-gray-200 rounded-lg shadow-xs overflow-hidden dark:border-neutral-700 dark:shadow-gray-900">
+        <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+          <thead class="bg-gray-50 dark:bg-neutral-700">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">
+              Product Name
+            </th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">
+              Price
+            </th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">
+              Quantity
+            </th>
+            <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">
+              Total
+            </th>
+          </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+            @for (item of cartItems; track $index) {
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                <div class="col-span-12 md:col-span-6 flex items-center gap-6">
+                  <div class="w-24 h-24 bg-gray-100 rounded-sm flex items-center justify-center overflow-hidden border">
+                    <img [src]="item.strMealThumb" alt="product" class="object-cover w-full h-full" />
+                  </div>
+                  <div>
+                    <div class="text-gray-800 font-medium">{{ item.strMeal }}</div>
+                    <div class="text-sm text-gray-400 mt-1">{{ item.strCategoryDescription | truncate:50 }}</div>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                  <span class="text-gray-400">{{ item.price | currency:'USD' }}</span>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                <div class="max-w-xs mx-auto">
+                  <div class="relative flex items-center">
+                    <button (click)="decreaseQty(item)" type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary rounded-full text-sm focus:outline-none h-6 w-6 cursor-pointer">
+                      <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                    </button>
+                    <input
+                      type="text"
+                      id="counter-input"
+                      data-input-counter class="shrink-0 text-heading border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center"
+                      placeholder=""
+                      [value]="item.addCart"
+                      required />
+                    <button (click)="addingQty(item)" type="button" id="increment-button" data-input-counter-increment="counter-input" class="flex items-center justify-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary rounded-full text-sm focus:outline-none h-6 w-6 cursor-pointer">
+                      <svg class="w-3 h-3 text-heading" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
+                <span class="text-gray-400">
+                  {{ item.price * item.addCart | currency:'USD' }}
+                </span>
+              </td>
+            </tr>
+            }
+          </tbody>
+          <tfoot class="bg-gray-50 dark:bg-neutral-700">
+            <tr>
+            <td colspan="3" class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+              Sub Total
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
+              <span class="text-gray-400">
+                {{ total | currency:'USD'}}
+              </span>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div CLASS="mt-5 flex justify-end gap-5">
+    <button
+      routerLink="/product"
+      aria-label="CONTINUE SHOPPING"
+      class="cursor-pointer px-4 py-3 bg-black text-white hover:opacity-70">
+      CONTINUE SHOPPING
+    </button>
+    <button
+      routerLink="/product"
+      aria-label="CONTINUE SHOPPING"
+      class="cursor-pointer px-4 py-3 bg-yellow-400 hover:opacity-70">
+      PROCEED TO CHECKOUT
+    </button>
+  </div>
+</section>
+
+

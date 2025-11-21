@@ -1,0 +1,155 @@
+<!-- section-1 -->
+<app-hero/>
+
+<!-- section-2 -->
+<section class="w-full py-14 bg-white">
+  <div class="bg-[#F8F8F8] max-w-6xl mx-auto grid md:grid-cols-3 gap-10 text-center px-4">
+
+    <!-- Feature 1 -->
+    <div class="p-5">
+      <img src="icon/icon-support.webp" class="mx-auto mb-4 w-12" />
+      <h3 class="font-semibold tracking-wide mb-1">24/7 FRIENDLY SUPPORT</h3>
+      <p class="text-sm text-gray-600">Our support team always ready for you to 7 days a week</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="p-5">
+      <img src="icon/icon-delivery.png" class="mx-auto mb-4 w-12" />
+      <h3 class="font-semibold tracking-wide mb-1">FREE SHIPPING</h3>
+      <p class="text-sm text-gray-600">Free worldwide shipping on all area order above $100</p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="p-5">
+      <img src="icon/icon-support.webp" class="mx-auto mb-4 w-12" />
+      <h3 class="font-semibold tracking-wide mb-1">7 DAYS EASY RETURN</h3>
+      <p class="text-sm text-gray-600">Product any fault within 7 days for an immediately exchange.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- section-3-->
+<section class="bg-[#FBF4EF] py-16">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+
+      @for (category of categories.slice(0, 6); track $index) {
+        <!-- CARD 1 -->
+        <div class="bg-white p-8 rounded-lg shadow-sm cursor-pointer hover:opacity-60">
+          <h3 class="text-lg font-semibold tracking-wide mb-4">
+            {{category.strCategory | uppercase}}
+          </h3>
+          <hr class="border-gray-200 mb-6">
+
+          <div class="flex items-center justify-between">
+            <div class="text-gray-600 text-sm">
+              {{ category.strCategoryDescription | truncate:100 }}
+            </div>
+
+            <img [src]="category.strCategoryThumb" alt="sandwich" class="w-40 h-auto">
+          </div>
+        </div>
+      }
+
+  </div>
+</section>
+
+<!-- section-4 -->
+<section class="bg-white max-w-7xl mx-auto px-4 py-20">
+
+  <div class="grid lg:grid-cols-3 gap-8">
+
+    <!-- LEFT PRODUCT GRID (2 columns) -->
+    <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6">
+
+      @for (category of oneCategory.slice(1, 5); track $index) {
+        <div class="bg-white p-4 rounded-lg shadow-sm border cursor-pointer hover:opacity-60">
+          <div class="relative bg-gray-50 p-6 flex items-center justify-center">
+            <div class="absolute top-3 right-3 bg-red-600 text-white text-xs px-2 py-1 rounded">
+              5%
+            </div>
+            <img [src]="category.strMealThumb" class="w-36" />
+          </div>
+          <p class="mt-4 text-sm font-medium">{{ category.strMeal }}</p>
+          <p class="text-sm line-through text-gray-400">$23.00</p>
+          <p class="text-[#D12727] font-semibold -mt-1">$22.00</p>
+        </div>
+      }
+    </div>
+
+    <!-- BIG IMAGE RIGHT -->
+    <div class="relative cursor-pointer hover:opacity-60">
+      <img
+        [src]="oneCategory[0]?.strMealThumb"
+        class="w-full h-full object-cover rounded-lg shadow"
+      />
+
+      <div class="absolute bottom-0 left-0 right-0 bg-white/90 text-center py-3">
+        <span class="tracking-wide text-[12px] font-medium">
+          {{nameOneCategory | uppercase}}
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- section-5 -->
+<section class="bg-[#F7F7F7] py-24">
+  <div class="max-w-5xl mx-auto px-4">
+
+    <h2 class="text-center text-lg tracking-wide font-semibold mb-12">
+      TESTIMONIALS
+    </h2>
+
+    <!-- CARD WRAPPER -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- CARD 1 -->
+      <div class="bg-white rounded-lg shadow p-6 flex items-start gap-4 hover:opacity-60">
+        <img src="https://avatar.iran.liara.run/public/23" class="w-14 h-14 rounded-full object-cover">
+        <div>
+          <p class="text-[12px] font-bold tracking-wider mb-2">REIN® PSR0022</p>
+          <p class="text-gray-600 text-sm mb-3">
+            Power Steering Reservoir OEM direct replacement, fits perfectly only steering pump. Brought my car up to spec again.
+          </p>
+          <div class="flex text-yellow-500 text-sm">★★★★★</div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="bg-white rounded-lg shadow p-6 flex items-start gap-4 hover:opacity-60">
+        <img src="https://avatar.iran.liara.run/public/24" class="w-14 h-14 rounded-full object-cover">
+        <div>
+          <p class="text-[12px] font-bold tracking-wider mb-2">REIN® PSR0022</p>
+          <p class="text-gray-600 text-sm mb-3">
+            Power Steering Reservoir OEM direct replacement, fits perfectly only steering pump. Brought my car up to spec again.
+          </p>
+          <div class="flex text-yellow-500 text-sm">★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- section-6 -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-0">
+
+  <div class="col-span-2 row-span-2 lg:col-span-2 lg:row-span-2">
+    <img
+      src="https://www.themealdb.com/images/media/meals/4o4wh11761848573.jpg"
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <img src="https://www.themealdb.com/images/media/meals/uvuyxu1503067369.jpg" class="w-full h-full object-cover" />
+  <img src="https://www.themealdb.com/images/media/meals/92wbmf1763252334.jpg" class="w-full h-full object-cover" />
+  <img src="https://www.themealdb.com/images/media/meals/1520084413.jpg" class="w-full h-full object-cover" />
+  <img src="https://www.themealdb.com/images/media/meals/a15wsa1614349126.jpg" class="w-full h-full object-cover" />
+  <img src="https://www.themealdb.com/images/media/meals/ysxwuq1487323065.jpg" class="w-full h-full object-cover" />
+  <img src="https://www.themealdb.com/images/media/meals/7n8su21699013057.jpg" class="w-full h-full object-cover" />
+
+</section>

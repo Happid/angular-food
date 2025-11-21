@@ -1,0 +1,14 @@
+<div class="my-5 flex justify-center gap-3">
+  @for (page of [].constructor(totalPages); let i = $index; track $index) {
+    <span
+      class="cursor-pointer py-1.5 px-3 border text-sm shadow-md"
+      [ngClass]="{
+        'bg-orange-500 text-white': page === currentPage,
+        'bg-white text-gray-600': page !== currentPage
+    }"
+      (click)="goToPage(i + 1)"
+    >
+     {{ i + 1 }}
+    </span>
+  }
+</div>

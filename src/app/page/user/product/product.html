@@ -1,0 +1,99 @@
+<!-- Hero Section -->
+<section class="bg-white relative h-[380px] w-full">
+  <img
+    src="https://images.unsplash.com/photo-1550317138-10000687a72b"
+    class="absolute inset-0 w-full h-full object-cover"
+    alt="Hero Background"
+  />
+
+  <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+    <h1 class="text-white text-5xl font-bold mb-3">Products</h1>
+    <p class="text-white">Home > Products</p>
+
+    <div class="mt-10 flex gap-10 text-white font-medium">
+      <a href="#" class="hover:text-gray-300">Beef</a>
+      <a href="#" class="hover:text-gray-300">Chicken</a>
+      <a href="#" class="hover:text-gray-300">Dessert</a>
+      <a href="#" class="hover:text-gray-300">Miscellaneous</a>
+      <a href="#" class="hover:text-gray-300">Pasta</a>
+      <a href="#" class="hover:text-gray-300">Seafood</a>
+    </div>
+  </div>
+</section>
+
+<!-- Filter & Sorting -->
+<div class="bg-white container mx-auto px-6 mt-10 flex items-center justify-between">
+  <button class="border border-black px-4 py-2 rounded-md flex items-center gap-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L15 12.414V19a1 1 0 01-1.447.894l-4-2A1 1 0 019 17V12.414L3.293 6.707A1 1 0 013 6V4z" />
+    </svg>
+    Filter
+  </button>
+
+  <div class="text-sm text-gray-600">
+    Default sorting ▾
+  </div>
+</div>
+
+<!-- Product List -->
+<div class="bg-white container mx-auto px-6 my-10">
+
+  @for (product of products; track $index) {
+    <div class="flex gap-10 items-start my-10">
+
+      <!-- Product Image -->
+      <div class="w-1/3">
+
+          <img
+            [src]="product.strMealThumb"
+            class="w-full h-64 object-contain"
+            alt="Product Image"
+          />
+
+      </div>
+
+      <!-- Product Info -->
+      <div class="w-2/3">
+        <h2 class="text-xl font-semibold text-orange-500">{{ product.strMeal }}</h2>
+        <p class="text-gray-700 text-lg mt-1">
+          {{ product.price | currency:'USD' }}
+        </p>
+
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          {{ product.strCategoryDescription }}
+        </p>
+
+        <!-- Color Variants -->
+        <div class="mt-5 flex gap-3">
+          <span class="w-4 h-4 rounded-full bg-yellow-400"></span>
+          <span class="w-4 h-4 rounded-full bg-red-500"></span>
+        </div>
+
+        <div class="mt-5 flex gap-3">
+          <button
+            (click)="updateWishlistStatus(product)"
+            class="cursor-pointer bg-white p-3 shadow-lg" aria-label="wishlist">
+            <app-love-or-not [wishlist]="product.wishlist"/>
+          </button>
+          <button
+            (click)="addCart(product)"
+            class="cursor-pointer bg-white p-3 shadow-lg"
+            aria-label="cart">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 hover:opacity-50" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <hr class="border border-gray-100"/>
+  }
+</div>
+
+<!--<app-paggination-->
+<!--  [currentPage]="currentPage"-->
+<!--  [totalPages]="totalPages"-->
+<!--  (pageChange)="handlePageChange($event)"-->
+<!--/>-->
