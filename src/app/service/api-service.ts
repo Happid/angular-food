@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {catchError, Observable, throwError} from 'rxjs';
 import {IByOneCategory, ICategory} from '../model/category.interface';
+import {environment} from '../../../environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
 
-  private baseUrl = '/api/json/v1/1';
+  private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
